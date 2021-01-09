@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "examen-final"
+    }
+  },
+  "defaultProject": "examen-final",
+  "cli": {
+    "analytics": "83d06e58-c7b7-4cf3-b250-dc1b9a4fb33b"
+  }
 }
