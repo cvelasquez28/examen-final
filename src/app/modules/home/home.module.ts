@@ -3,11 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { ContactPageComponent } from './pages/contact-page/contact-page.component';
-
 
 @NgModule({
-  declarations: [HomePageComponent, ContactPageComponent],
+  declarations: [HomePageComponent],
   imports: [
     CommonModule,
     HomeRoutingModule
