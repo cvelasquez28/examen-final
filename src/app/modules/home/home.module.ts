@@ -6,6 +6,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { CourseContainerComponent } from './components/course-container/course-container.component';
 import { InstructorsComponent } from './components/instructors/instructors.component';
 import { InstructorService } from './services/instructor.service';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { InstructorService } from './services/instructor.service';
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    SharedModule
   ],
   providers: [{provide: InstructorService}]
 })

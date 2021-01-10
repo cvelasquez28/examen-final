@@ -8,6 +8,9 @@ import { CourseComponent } from './components/course/course.component';
   declarations: [CourseComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+    CourseComponent
   ]
 })
 export class SharedModule { }

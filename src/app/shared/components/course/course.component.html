@@ -1,1 +1,14 @@
-<p>course works!</p>
+<div class="col">
+    <div class="card h-100">
+        <img [src]="course.image" width="30" class="card-img-top" [alt]="course.name">
+        <div class="card-body">
+            <h5 class="card-title">{{ course.name }}</h5>
+            <p class="card-text">{{ course.price }} <br> {{ course.students }} students</p>
+        </div>
+        <div class="card-footer text-center">            
+            <button (click)="viewCourse()" class="btn btn-outline-primary btn-block">
+                Ver más...
+            </button>
+        </div>
+    </div>
+</div>
