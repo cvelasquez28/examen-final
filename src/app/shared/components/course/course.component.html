@@ -6,7 +6,7 @@
             <p class="card-text">{{ course.price }} <br> {{ course.students }} students</p>
         </div>
         <div class="card-footer text-center">            
-            <button (click)="viewCourse()" class="btn btn-outline-primary btn-block">
+            <button (click)="viewCourse(course.id)" class="btn btn-outline-primary btn-block">
                 Ver más...
             </button>
         </div>

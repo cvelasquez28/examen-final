@@ -1,1 +1,25 @@
-<p>course-detail-page works!</p>
+<div *ngIf="course">
+    <div class="bg-light p-5 rounded text-center">
+        <h1>{{ course.name }}</h1>
+    </div>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-8">
+                <img [src]="course.image" width="300px">
+                <h2 class="blog-post-title">{{ course.name }}</h2>
+                <p>
+                    {{ course.summary }}
+                </p>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 mb-3 bg-light rounded">
+                    <p>Price {{ course.price }}</p>
+                    <p>Duration {{ course.duration }}</p>
+                    <p>Lectures {{ course.lessons }} Lessons</p>
+                    <p>Enrolled {{ course.students }} Students</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
