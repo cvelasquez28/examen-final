@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Instructor } from '../../interfaces/instructor';
+import { InstructorService } from '../../services/instructor.service';
 
 @Component({
   selector: 'app-instructors',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InstructorsComponent implements OnInit {
 
-  constructor() { }
+  instructors: Instructor[] = [];
+
+  constructor(private instructorService: InstructorService) { }
 
   ngOnInit(): void {
+    this.instructorService.getInstructors()
+    .subscribe(instructors => this.instructors = instructors);
   }
 
 }
