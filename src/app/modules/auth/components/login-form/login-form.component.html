@@ -1,17 +1,21 @@
-<form>
+<form [formGroup]="loginForm">
     <div class="form-group">
         <label>User Name</label>
-        <input type="text" class="form-control"  placeholder="Username">
+        <input type="text" class="form-control"  placeholder="Username"
+        name="username" id="username"
+        formControlName="username"
+        [ngClass]="{'is-invalid': f.username.invalid && f.username.touched, 'is-valid': f.username.valid && f.username.touched}">
     </div>
     <div class="form-group">
         <label>Password</label>
-        <input type="password" class="form-control" placeholder="Password">
+        <input type="password" class="form-control" placeholder="Password"
+        name="password" id="password"
+        formControlName="password"
+        >
     </div>
     <div class="row mt-3 mb-5">
-        <!-- /.col -->
         <div class="d-grid col-6 mx-auto">
             <button type="button" class="btn btn-primary btn-block">Login</button>
         </div>
-        <!-- /.col -->
     </div>
 </form>
